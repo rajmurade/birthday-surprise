@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Birthday Surprise</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:linear-gradient(
+                135deg,
+                #ff9ecf,
+                #ffd6e7,
+                #cdb4db
+            );
+
+            overflow:hidden;
+        }
+
+        .box{
+            text-align:center;
+        }
+
+        h1{
+            font-size:5rem;
+            color:white;
+
+            text-shadow:
+                0 0 15px white;
+
+            animation:pulse 2s infinite;
+        }
+
+        h2{
+            color:white;
+            margin-top:20px;
+            margin-bottom:40px;
+        }
+
+        button{
+            padding:18px 40px;
+
+            border:none;
+            border-radius:50px;
+
+            background:white;
+            color:#ff4d88;
+
+            font-size:22px;
+
+            cursor:pointer;
+
+            transition:.3s;
+        }
+
+        button:hover{
+            transform:scale(1.1);
+        }
+
+        @keyframes pulse{
+
+            50%{
+                transform:scale(1.05);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>🎂 HAPPY BIRTHDAY 🎂</h1>
+
+    <h2>{{ name }}</h2>
+
+    <a href="/celebrate">
+
+        <button>
+
+            Click For Your Surprise ✨
+
+        </button>
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

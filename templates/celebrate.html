@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Happy Birthday</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:#fff0c9;
+
+            text-align:center;
+        }
+
+        .box{
+            padding:40px;
+        }
+
+        h1{
+            font-size:4rem;
+            color:#ff4d88;
+            margin-bottom:30px;
+
+            animation:zoom 2s infinite alternate;
+        }
+
+        p{
+            font-size:1.3rem;
+            margin-bottom:30px;
+        }
+
+        button{
+            padding:18px 40px;
+
+            border:none;
+            border-radius:50px;
+
+            background:#7c3aed;
+            color:white;
+
+            font-size:22px;
+
+            cursor:pointer;
+        }
+
+        @keyframes zoom{
+
+            from{
+                transform:scale(1);
+            }
+
+            to{
+                transform:scale(1.1);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>
+
+        🎉 HAPPY BIRTHDAY {{ name }} 🎉
+
+    </h1>
+
+    <p>
+
+        Congratulations!<br><br>
+
+        You have successfully survived another year 😆
+
+    </p>
+
+    <a href="/gift">
+
+        <button>
+
+            🎁 Open Your Gift 🎁
+
+        </button>
+
+    </a>
+
+</div>
+
+<script>
+
+confetti({
+    particleCount:250,
+    spread:180,
+    origin:{y:0.6}
+});
+
+setInterval(() => {
+
+    confetti({
+        particleCount:50,
+        spread:100
+    });
+
+}, 2000);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Gift</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:#e9d5ff;
+
+            text-align:center;
+        }
+
+        .box{
+            padding:40px;
+        }
+
+        img{
+
+            width:350px;
+
+            opacity:0;
+
+            animation:fadeIn 2s forwards;
+
+        }
+
+        h1{
+            margin-bottom:20px;
+            color:#7c3aed;
+        }
+
+        h2{
+            margin-top:20px;
+        }
+
+        @keyframes fadeIn{
+
+            from{
+
+                opacity:0;
+                transform:translateY(50px);
+
+            }
+
+            to{
+
+                opacity:1;
+                transform:translateY(0);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>🎁 Your Gift 🎁</h1>
+
+    <img src="{{ url_for('static', filename='kitty.png') }}">
+
+    <h2>
+
+        Since holidays stole your real KitKat... 🍫<br><br>
+
+        I had to hire a professional delivery cat 🐱
+
+    </h2>
+
+    <br>
+
+    <h2>
+
+        Happy Birthday ❤️
+
+    </h2>
+
+</div>
+
+</body>
+
+</html>
