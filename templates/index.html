@@ -33,10 +33,11 @@
 
         .box{
             text-align:center;
+            padding:20px;
         }
 
         h1{
-            font-size:5rem;
+            font-size:4rem;
             color:white;
 
             text-shadow:
@@ -45,13 +46,34 @@
             animation:pulse 2s infinite;
         }
 
-        h2{
+        .name{
+
+            font-size:5rem;
+
+            font-weight:bold;
+
             color:white;
-            margin-top:20px;
+
+            margin-top:25px;
+            margin-bottom:20px;
+
+            text-shadow:
+                0 0 10px white,
+                0 0 20px white,
+                0 0 30px #ff69b4,
+                0 0 50px #ff69b4;
+
+            animation:glow 2s infinite alternate;
+        }
+
+        .message{
+            color:white;
+            font-size:1.5rem;
             margin-bottom:40px;
         }
 
         button{
+
             padding:18px 40px;
 
             border:none;
@@ -61,6 +83,7 @@
             color:#ff4d88;
 
             font-size:22px;
+            font-weight:bold;
 
             cursor:pointer;
 
@@ -79,6 +102,40 @@
 
         }
 
+        @keyframes glow{
+
+            from{
+                text-shadow:
+                    0 0 10px white,
+                    0 0 20px white,
+                    0 0 30px #ff69b4;
+            }
+
+            to{
+                text-shadow:
+                    0 0 20px white,
+                    0 0 40px white,
+                    0 0 60px #ff69b4;
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:2.5rem;
+            }
+
+            .name{
+                font-size:3.5rem;
+            }
+
+            .message{
+                font-size:1.2rem;
+            }
+
+        }
+
     </style>
 
 </head>
@@ -89,14 +146,18 @@
 
     <h1>🎂 HAPPY BIRTHDAY 🎂</h1>
 
-    <h2>{{ name }}</h2>
+    <div class="name">
+        {{ name }} ✨
+    </div>
+
+    <div class="message">
+        Today is all about you 💖
+    </div>
 
     <a href="/celebrate">
 
         <button>
-
             Click For Your Surprise ✨
-
         </button>
 
     </a>
