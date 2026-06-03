@@ -124,6 +124,20 @@ setInterval(() => {
 
 </script>
 
+<audio id="popSound">
+    <source src="{{ url_for('static', filename='pop.mp3') }}" type="audio/mpeg">
+</audio>
+
+<script>
+
+window.onload = function() {
+
+    document.getElementById("popSound").play();
+
+};
+
+</script>
+
 </body>
 
 </html>
